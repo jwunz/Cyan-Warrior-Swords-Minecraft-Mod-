@@ -66,7 +66,7 @@ import cpw.mods.fml.common.registry.LanguageRegistry;
 public class CyanWarriorSwordMod
 {
     public static final String MODID = "Cyan Warrior Swords Mod";
-    public static final String VERSION = "2.0";
+    public static final String VERSION = "2.0.1 Alpha Test";
     
     @Metadata
     public static ModMetadata meta;
@@ -343,6 +343,8 @@ public class CyanWarriorSwordMod
 				new Object[]{"EBE", "BSB", "EBE", 'S', new ItemStack(enderSword), 'E', Items.ender_eye, 'B', Items.blaze_rod});
 		GameRegistry.addRecipe(new ItemStack(blizzardSword, 1), 
 				new Object[]{"IBI", "BFB", "IBI", 'F', new ItemStack(iceSword), 'I', Blocks.ice, 'B', Items.ghast_tear});
+		GameRegistry.addRecipe(new ItemStack(wolfSword, 1), 
+				new Object[]{"IBI", "BFB", "IBI", 'F', new ItemStack(beastSword), 'I', Items.bone, 'B', Items.blaze_powder});
 		GameRegistry.addRecipe(new ItemStack(windWhirlSword, 1), 
 				new Object[]{"IBI", "BFB", "IBI", 'F', new ItemStack(windBlastSword), 'I', Items.feather, 'B', Items.ghast_tear});
 		GameRegistry.addRecipe(new ItemStack(steamSword, 1), 
