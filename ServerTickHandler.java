@@ -1,8 +1,6 @@
 package com.cyanwarriorswords.cyanwarriorswordsmod;
 
 import java.util.EnumSet;
-import cpw.mods.fml.relauncher.Side;
-import cpw.mods.fml.relauncher.SideOnly;
 import net.minecraft.block.Block;
 import net.minecraft.enchantment.Enchantment;
 import net.minecraft.enchantment.EnumEnchantmentType;

@@ -1,7 +1,5 @@
 package com.cyanwarriorswords.cyanwarriorswordsmod.Items;
 
-import cpw.mods.fml.relauncher.Side;
-import cpw.mods.fml.relauncher.SideOnly;
 import net.minecraft.block.material.Material;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityLiving;
@@ -14,11 +12,7 @@ import net.minecraft.potion.PotionEffect;
 import net.minecraft.util.DamageSource;
 import net.minecraft.util.MovingObjectPosition;
 import net.minecraft.world.World;
-import net.minecraft.entity.EntityLiving;
 import net.minecraft.entity.monster.EntityBlaze;
-import net.minecraft.util.DamageSource;
-import net.minecraft.util.MovingObjectPosition;
-import net.minecraft.world.World;
 
 public class EntityFrostBall extends EntityThrowable
 {
