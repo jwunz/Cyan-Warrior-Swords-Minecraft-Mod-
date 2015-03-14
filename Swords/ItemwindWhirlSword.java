@@ -14,6 +14,7 @@ import net.minecraft.item.ItemSword;
 import net.minecraft.potion.Potion;
 import net.minecraft.potion.PotionEffect;
 import net.minecraft.util.MathHelper;
+import net.minecraft.world.Explosion;
 import net.minecraft.world.World;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
@@ -64,6 +65,7 @@ public boolean doesContainerItemLeaveCraftingGrid(ItemStack par1ItemStack)
 public ItemStack onItemRightClick(ItemStack par1ItemStack, World par2World, EntityPlayer par3EntityPlayer){
 	
 {
+	par3EntityPlayer.setItemInUse(par1ItemStack, this.getMaxItemUseDuration(par1ItemStack));
 float closest = Float.MAX_VALUE;
 Entity thisOne=null;
 for (int i = 0; i < par2World.loadedEntityList.size(); i++)
@@ -96,9 +98,15 @@ if((thisOne.posX - par3EntityPlayer.posX <= 4)){
 
 	if((thisOne.posZ < par3EntityPlayer.posZ) && (thisOne.posX - par3EntityPlayer.posX <= 4)){
 		thisOne.addVelocity(thisOne.posX - par3EntityPlayer.posX -4, 0, thisOne.posZ - par3EntityPlayer.posZ -4);
+		Explosion derp = new Explosion(par2World, par3EntityPlayer, thisOne.posX, thisOne.posY, thisOne.posZ, 1);
+		derp.doExplosionA();
+		derp.doExplosionB(true);
 		}
 	if((thisOne.posZ > par3EntityPlayer.posZ) && (par3EntityPlayer.posZ - thisOne.posZ >= -4)){
 		thisOne.addVelocity(thisOne.posX - par3EntityPlayer.posX -4, 0, par3EntityPlayer.posX - thisOne.posX +4);
+		Explosion derp = new Explosion(par2World, par3EntityPlayer, thisOne.posX, thisOne.posY, thisOne.posZ, 1);
+		derp.doExplosionA();
+		derp.doExplosionB(true);
 		}
 
 }
@@ -109,9 +117,15 @@ if((par3EntityPlayer.posX - thisOne.posX >= -4)){
 
 if((thisOne.posZ < par3EntityPlayer.posZ) && (thisOne.posX - par3EntityPlayer.posX <= 4)){
 	thisOne.addVelocity(par3EntityPlayer.posX - thisOne.posX +4, 0, thisOne.posZ - par3EntityPlayer.posZ -4);
+	Explosion derp = new Explosion(par2World, par3EntityPlayer, thisOne.posX, thisOne.posY, thisOne.posZ, 1);
+	derp.doExplosionA();
+	derp.doExplosionB(true);
 	}
 if((thisOne.posZ > par3EntityPlayer.posZ) && (par3EntityPlayer.posZ - thisOne.posZ >= -4)){
 	thisOne.addVelocity(par3EntityPlayer.posX - thisOne.posX +4, 0, par3EntityPlayer.posX - thisOne.posX +4);
+	Explosion derp = new Explosion(par2World, par3EntityPlayer, thisOne.posX, thisOne.posY, thisOne.posZ, 1);
+	derp.doExplosionA();
+	derp.doExplosionB(true);
 	}
 
 }
