@@ -49,6 +49,7 @@ public int getDamageVsEntity(Entity par1Entity)
     return 6;
 }
 public ItemStack onItemRightClick(ItemStack itemstack, World world, EntityPlayer entity){
+	entity.setItemInUse(itemstack, this.getMaxItemUseDuration(itemstack));
 float var4 = 1.0F;
 int i = (int)(entity.prevPosX + (entity.posX - entity.prevPosX) * (double)var4);
 int j = (int)(entity.prevPosY + (entity.posY - entity.prevPosY) * (double)var4 + 1.62D - (double)entity.yOffset);

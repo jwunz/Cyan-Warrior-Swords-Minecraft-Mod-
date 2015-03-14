@@ -59,6 +59,7 @@ public boolean doesContainerItemLeaveCraftingGrid(ItemStack par1ItemStack)
     return true;
 }
 public ItemStack onItemRightClick(ItemStack itemstack, World world, EntityPlayer entity){
+	entity.setItemInUse(itemstack, this.getMaxItemUseDuration(itemstack));
 float var4 = 1.0F;
 int l;
 int i = (int)(entity.prevPosX + (entity.posX - entity.prevPosX) * (double)var4);

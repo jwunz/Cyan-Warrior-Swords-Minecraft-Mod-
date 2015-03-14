@@ -2,6 +2,7 @@ package com.cyanwarriorswords.cyanwarriorswordsmod.Swords;
 
 import net.minecraft.client.renderer.texture.IIconRegister;
 import net.minecraft.entity.Entity;
+import net.minecraft.entity.EntityLiving;
 import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.entity.passive.EntityWolf;
 import net.minecraft.entity.player.EntityPlayer;
@@ -64,32 +65,61 @@ public float getDamageVsEntity(Entity par1Entity)
     return 7.0F;
 }
 public ItemStack onItemRightClick(ItemStack itemstack, World world, EntityPlayer entity){
-float var4 = 1.0F;
-int i = (int)(entity.prevPosX + (entity.posX - entity.prevPosX) * (double)var4);
-int j = (int)(entity.prevPosY + (entity.posY - entity.prevPosY) * (double)var4 + 1.62D - (double)entity.yOffset);
-int k = (int)(entity.prevPosZ + (entity.posZ - entity.prevPosZ) * (double)var4);
+	{
+		entity.setItemInUse(itemstack, this.getMaxItemUseDuration(itemstack));
+		
+		float closest = Float.MAX_VALUE;
+		Entity thisOne=null;
+		for (int i = 0; i < world.loadedEntityList.size(); i++)
+		{
+		if (((Entity)world.loadedEntityList.get(i)).getDistanceToEntity(entity)<closest)
+		{
+		if (world.loadedEntityList.get(i) instanceof EntityLiving) //if it is a mob...
+		{
+		closest = ((Entity)world.loadedEntityList.get(i)).getDistanceToEntity(entity);
+		thisOne = ((Entity)world.loadedEntityList.get(i));
+		}
+		}
+		}
 
-if (!world.isRemote)
-{
-Vec3 look = entity.getLookVec();
-EntityWolf fireball2 = new EntityWolf(world);
-fireball2.setPosition(entity.posX + look.xCoord * 5, entity.posY + look.yCoord * 5, entity.posZ + look.zCoord * 5);
-fireball2.motionX = look.xCoord * 0.5;
-fireball2.motionY = look.yCoord * 0.5;
-fireball2.motionZ = look.zCoord * 0.5;
-world.spawnEntityInWorld(fireball2);
-/*
-fireball2.setOwner(entity.username);
-*/
-fireball2.setTamed(true);
-}
+		float var4 = 1.0F;
+		int a = (int)(entity.prevPosX + (entity.posX - entity.prevPosX) * (double)var4);
+		int b = (int)(entity.prevPosY + (entity.posY - entity.prevPosY) * (double)var4 + 1.62D - (double)entity.yOffset);
+		int c = (int)(entity.prevPosZ + (entity.posZ - entity.prevPosZ) * (double)var4);
 
-entity.addPotionEffect(new PotionEffect(Potion.moveSpeed.id, 900, 3));
+		if (thisOne!=null)
+		{
 
-itemstack.damageItem(50, entity);
+			if (!world.isRemote)
+			{
+			Vec3 look = entity.getLookVec();
+			EntityWolf fireball2 = new EntityWolf(world);
+			fireball2.setPosition(a, b, c);
+			fireball2.motionX = look.xCoord * 0.15;
+			fireball2.motionY = look.yCoord * 0.15;
+			fireball2.motionZ = look.zCoord * 0.15;
+			world.spawnEntityInWorld(fireball2);
+			fireball2.func_152115_b(entity.getCommandSenderName());
+			fireball2.setTamed(true);
+			fireball2.addPotionEffect(new PotionEffect(Potion.damageBoost.id, 200, 2));
+			fireball2.addPotionEffect(new PotionEffect(Potion.moveSpeed.id, 200, 2));
+			fireball2.addPotionEffect(new PotionEffect(Potion.fireResistance.id, 200, 2));
+			
+			}
 
-return itemstack;
-}
+
+			entity.addPotionEffect(new PotionEffect(Potion.moveSpeed.id, 900, 3));
+
+			itemstack.damageItem(50, entity);
+		}
+		}
+		itemstack.damageItem(15, entity);
+	
+
+		return itemstack;
+		}
+
+
 public ItemStack onItemUse(ItemStack itemstack, World world, EntityPlayer entity){
 float var4 = 1.0F;
 int i = (int)(entity.prevPosX + (entity.posX - entity.prevPosX) * (double)var4);

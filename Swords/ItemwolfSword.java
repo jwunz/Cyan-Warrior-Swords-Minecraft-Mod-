@@ -68,6 +68,7 @@ public float getDamageVsEntity(Entity par1Entity)
 public ItemStack onItemRightClick(ItemStack par1ItemStack, World par2World, EntityPlayer par3EntityPlayer){
 	
 {
+	par3EntityPlayer.setItemInUse(par1ItemStack, this.getMaxItemUseDuration(par1ItemStack));
 float closest = Float.MAX_VALUE;
 Entity thisOne=null;
 for (int i = 0; i < par2World.loadedEntityList.size(); i++)
@@ -99,6 +100,7 @@ if (thisOne!=null)
 	fireball2.motionY = look.yCoord * 0.15;
 	fireball2.motionZ = look.zCoord * 0.15;
 	par2World.spawnEntityInWorld(fireball2);
+	fireball2.func_152115_b(par3EntityPlayer.getCommandSenderName());
 	fireball2.setTamed(true);
 	fireball2.addPotionEffect(new PotionEffect(Potion.damageBoost.id, 200, 2));
 	fireball2.addPotionEffect(new PotionEffect(Potion.moveSpeed.id, 200, 2));
