@@ -54,9 +54,9 @@ float var4 = 1.0F;
 int i = (int)(entity.prevPosX + (entity.posX - entity.prevPosX) * (double)var4);
 int j = (int)(entity.prevPosY + (entity.posY - entity.prevPosY) * (double)var4 + 1.62D - (double)entity.yOffset);
 int k = (int)(entity.prevPosZ + (entity.posZ - entity.prevPosZ) * (double)var4);
-entity.addPotionEffect(new PotionEffect(Potion.blindness.id, 2000, 1));
-entity.addPotionEffect(new PotionEffect(Potion.nightVision.id, 2000, 4));
-entity.addPotionEffect(new PotionEffect(Potion.invisibility.id, 2000, 4));
+entity.addPotionEffect(new PotionEffect(Potion.blindness.id, 250, 1));
+entity.addPotionEffect(new PotionEffect(Potion.nightVision.id, 300, 4));
+entity.addPotionEffect(new PotionEffect(Potion.invisibility.id, 200, 4));
 
 itemstack.damageItem(15, entity);
 

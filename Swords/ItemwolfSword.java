@@ -91,6 +91,8 @@ int c = (int)(par3EntityPlayer.prevPosZ + (par3EntityPlayer.posZ - par3EntityPla
 if (thisOne!=null)
 {
 
+	
+		
 	if (!par2World.isRemote)
 	{
 	Vec3 look = par3EntityPlayer.getLookVec();
@@ -100,18 +102,73 @@ if (thisOne!=null)
 	fireball2.motionY = look.yCoord * 0.15;
 	fireball2.motionZ = look.zCoord * 0.15;
 	par2World.spawnEntityInWorld(fireball2);
-	fireball2.func_152115_b(par3EntityPlayer.getCommandSenderName());
 	fireball2.setTamed(true);
+    fireball2.setAttackTarget((EntityLivingBase)null);
+    fireball2.setHealth(20.0F);
+    fireball2.func_152115_b(par3EntityPlayer.getUniqueID().toString());
 	fireball2.addPotionEffect(new PotionEffect(Potion.damageBoost.id, 200, 2));
 	fireball2.addPotionEffect(new PotionEffect(Potion.moveSpeed.id, 200, 2));
 	fireball2.addPotionEffect(new PotionEffect(Potion.fireResistance.id, 200, 2));
+	}
 	
+	if (!par2World.isRemote)
+	{
+	Vec3 look = par3EntityPlayer.getLookVec();
+	EntityWolf fireball2 = new EntityWolf(par2World);
+	fireball2.setPosition(a, b, c);
+	fireball2.motionX = look.xCoord * 0.15;
+	fireball2.motionY = look.yCoord * 0.15;
+	fireball2.motionZ = look.zCoord * 0.15;
+	par2World.spawnEntityInWorld(fireball2);
+	fireball2.setTamed(true);
+    fireball2.setAttackTarget((EntityLivingBase)null);
+    fireball2.setHealth(20.0F);
+    fireball2.func_152115_b(par3EntityPlayer.getUniqueID().toString());
+	fireball2.addPotionEffect(new PotionEffect(Potion.damageBoost.id, 200, 2));
+	fireball2.addPotionEffect(new PotionEffect(Potion.moveSpeed.id, 200, 2));
+	fireball2.addPotionEffect(new PotionEffect(Potion.fireResistance.id, 200, 2));
+	}
+	
+	if (!par2World.isRemote)
+	{
+	Vec3 look = par3EntityPlayer.getLookVec();
+	EntityWolf fireball2 = new EntityWolf(par2World);
+	fireball2.setPosition(a, b, c);
+	fireball2.motionX = look.xCoord * 0.15;
+	fireball2.motionY = look.yCoord * 0.15;
+	fireball2.motionZ = look.zCoord * 0.15;
+	par2World.spawnEntityInWorld(fireball2);
+	fireball2.setTamed(true);
+    fireball2.setAttackTarget((EntityLivingBase)null);
+    fireball2.setHealth(20.0F);
+    fireball2.func_152115_b(par3EntityPlayer.getUniqueID().toString());
+	fireball2.addPotionEffect(new PotionEffect(Potion.damageBoost.id, 200, 2));
+	fireball2.addPotionEffect(new PotionEffect(Potion.moveSpeed.id, 200, 2));
+	fireball2.addPotionEffect(new PotionEffect(Potion.fireResistance.id, 200, 2));
+	}
+	
+	if (!par2World.isRemote)
+	{
+	Vec3 look = par3EntityPlayer.getLookVec();
+	EntityWolf fireball2 = new EntityWolf(par2World);
+	fireball2.setPosition(a, b, c);
+	fireball2.motionX = look.xCoord * 0.15;
+	fireball2.motionY = look.yCoord * 0.15;
+	fireball2.motionZ = look.zCoord * 0.15;
+	par2World.spawnEntityInWorld(fireball2);
+	fireball2.setTamed(true);
+    fireball2.setAttackTarget((EntityLivingBase)null);
+    fireball2.setHealth(20.0F);
+    fireball2.func_152115_b(par3EntityPlayer.getUniqueID().toString());
+	fireball2.addPotionEffect(new PotionEffect(Potion.damageBoost.id, 200, 2));
+	fireball2.addPotionEffect(new PotionEffect(Potion.moveSpeed.id, 200, 2));
+	fireball2.addPotionEffect(new PotionEffect(Potion.fireResistance.id, 200, 2));
 	}
 
 
 	par3EntityPlayer.addPotionEffect(new PotionEffect(Potion.moveSpeed.id, 900, 3));
 
-	par1ItemStack.damageItem(50, par3EntityPlayer);
+	par1ItemStack.damageItem(75, par3EntityPlayer);
 }
 }
 par1ItemStack.damageItem(15, par3EntityPlayer);

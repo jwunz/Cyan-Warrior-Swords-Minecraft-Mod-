@@ -66,7 +66,7 @@ import cpw.mods.fml.common.registry.LanguageRegistry;
 public class CyanWarriorSwordMod
 {
     public static final String MODID = "Cyan Warrior Swords Mod";
-    public static final String VERSION = "2.0.1 Alpha Test";
+    public static final String VERSION = "2.0.1";
     
     @Metadata
     public static ModMetadata meta;
@@ -293,87 +293,88 @@ public class CyanWarriorSwordMod
 		GameRegistry.registerItem(SwordHandle, "SwordHandle");
 		
     	/*Recipes*/
-		GameRegistry.addRecipe(new ItemStack(fireSword, 1), 
-				new Object[]{" B ", " B ", " P ", 'B', Items.blaze_powder, 'P', Items.blaze_rod});
-		GameRegistry.addRecipe(new ItemStack(darkSword, 1), 
-				new Object[]{" O ", " O ", "WPW", 'O', Blocks.obsidian, 'P', Items.blaze_rod, 'W', Items.spider_eye});
-		GameRegistry.addRecipe(new ItemStack(earthSword, 1), 
-				new Object[]{" D ", " D ", " P ", 'D', Blocks.dirt, 'P', Items.blaze_rod});
-		GameRegistry.addRecipe(new ItemStack(enderSword, 1), 
-				new Object[]{"EIE", "EIE", "PSP", 'E', Items.ender_pearl, 'P', Items.blaze_rod, 'I', Items.iron_ingot, 'S', Items.stick});
-		GameRegistry.addRecipe(new ItemStack(lightSword, 1), 
-				new Object[]{" T ", " T ", "NPN", 'T', Items.ghast_tear, 'P', Items.blaze_rod, 'N', Items.gold_nugget});
-		GameRegistry.addRecipe(new ItemStack(meteorSword, 1), 
-				new Object[]{" C ", "BPB", "BFB", 'B', Items.blaze_powder, 'P', Items.blaze_rod, 'F', new ItemStack(fireSword), 'C', Items.fire_charge});
-		GameRegistry.addRecipe(new ItemStack(peacefulNatureSword, 1), 
-				new Object[]{" S ", " C ", "SAS", 'S', Blocks.sapling, 'C', Items.reeds, 'A', new ItemStack(earthSword)});
-		GameRegistry.addRecipe(new ItemStack(thunderSword, 1), 
-				new Object[]{" B ", " B ", " P ", 'B', Blocks.redstone_block, 'P', Items.blaze_rod});
-		GameRegistry.addRecipe(new ItemStack(waterSword, 1), 
-				new Object[]{"GBG", "GBG", " P ", 'B', Items.water_bucket, 'P', Items.stick, 'G', Blocks.glass});
-		GameRegistry.addRecipe(new ItemStack(wildNatureSword, 1), 
-				new Object[]{" S ", " C ", "SAS", 'S', Blocks.cactus, 'C', Items.reeds, 'A', new ItemStack(peacefulNatureSword)});
-		GameRegistry.addRecipe(new ItemStack(windSword, 1), 
-				new Object[]{"EIE", "EIE", "PSP", 'E', Items.feather, 'P', Items.blaze_rod, 'I', Items.iron_ingot, 'S', Items.stick});
-		GameRegistry.addRecipe(new ItemStack(thunderstormSword, 1), 
-				new Object[]{" I ", "TIW", " S ", 'W', new ItemStack(windSword), 'T', new ItemStack(thunderSword), 'I', Items.iron_ingot, 'S', Items.stick});
-		GameRegistry.addRecipe(new ItemStack(meteoricthunderstormSword, 1), 
-				new Object[]{" I ", "TIW", " S ", 'W', new ItemStack(thunderstormSword), 'T', new ItemStack(meteorSword), 'I', Items.iron_ingot, 'S', Items.stick});
-		GameRegistry.addRecipe(new ItemStack(enderFireSword, 1), 
-				new Object[]{" I ", "AIB", " S ", 'A', new ItemStack(enderSword), 'B', new ItemStack(fireSword), 'I', Items.iron_ingot, 'S', Items.stick});
-		GameRegistry.addRecipe(new ItemStack(iceSword, 1), 
-				new Object[]{" B ", "B B", "BFB", 'B', Items.snowball, 'F', new ItemStack(waterSword)});
-		GameRegistry.addRecipe(new ItemStack(enderWindSword, 1), 
-				new Object[]{" I ", "AIB", " S ", 'A', new ItemStack(enderSword), 'B', new ItemStack(windSword), 'I', Items.iron_ingot, 'S', Items.stick});
-		GameRegistry.addRecipe(new ItemStack(enderThunderSword, 1), 
-				new Object[]{" I ", "AIB", " S ", 'A', new ItemStack(enderSword), 'B', new ItemStack(thunderSword), 'I', Items.iron_ingot, 'S', Items.stick});
-		GameRegistry.addRecipe(new ItemStack(thunderShockSword, 1), 
-				new Object[]{"BBB", "BAB", "BBB", 'A', new ItemStack(thunderSword), 'B', Items.redstone});
-		GameRegistry.addRecipe(new ItemStack(timeSword, 1), 
-				new Object[]{" I ", "AIB", " S ", 'A', new ItemStack(darkSword), 'B', new ItemStack(lightSword), 'I', Items.iron_ingot, 'S', Items.stick});
-		GameRegistry.addRecipe(new ItemStack(beastSword, 1), 
-				new Object[]{"EIE", "EIE", "PSP", 'E', Items.bone, 'P', Items.blaze_rod, 'I', Items.iron_ingot, 'S', Items.stick});
-		GameRegistry.addRecipe(new ItemStack(windBlastSword, 1), 
-				new Object[]{"PBF", "PEF", "PBF", 'E', new ItemStack(windSword), 'P', Items.gunpowder, 'F', Items.feather, 'B', Items.blaze_rod});
-		GameRegistry.addRecipe(new ItemStack(darkNetherSword, 1), 
-				new Object[]{" B ", "OSO", " O ", 'S', new ItemStack(darkSword), 'O', Blocks.obsidian, 'B', Items.nether_star});
-		GameRegistry.addRecipe(new ItemStack(lightNetherSword, 1), 
-				new Object[]{" B ", "OSO", " O ", 'S', new ItemStack(lightSword), 'O', Blocks.glowstone, 'B', Items.nether_star});
-		GameRegistry.addRecipe(new ItemStack(enderPortalSword, 1), 
-				new Object[]{"EBE", "BSB", "EBE", 'S', new ItemStack(enderSword), 'E', Items.ender_eye, 'B', Items.blaze_rod});
-		GameRegistry.addRecipe(new ItemStack(blizzardSword, 1), 
-				new Object[]{"IBI", "BFB", "IBI", 'F', new ItemStack(iceSword), 'I', Blocks.ice, 'B', Items.ghast_tear});
-		GameRegistry.addRecipe(new ItemStack(wolfSword, 1), 
-				new Object[]{"IBI", "BFB", "IBI", 'F', new ItemStack(beastSword), 'I', Items.bone, 'B', Items.blaze_powder});
-		GameRegistry.addRecipe(new ItemStack(windWhirlSword, 1), 
-				new Object[]{"IBI", "BFB", "IBI", 'F', new ItemStack(windBlastSword), 'I', Items.feather, 'B', Items.ghast_tear});
-		GameRegistry.addRecipe(new ItemStack(steamSword, 1), 
-				new Object[]{" I ", "AIB", " S ", 'A', new ItemStack(fireSword), 'B', new ItemStack(waterSword), 'I', Items.iron_ingot, 'S', Items.stick});
 		
+        GameRegistry.addRecipe(new ItemStack(fireSword, 1),
+				new Object[] { "BIB", "BIB", " P ", Character.valueOf('B'), Items.blaze_powder, Character.valueOf('I'), Items.iron_ingot, Character.valueOf('P'), new ItemStack(SwordHandle) });  
+		GameRegistry.addRecipe(new ItemStack(darkSword, 1),
+				new Object[] { "BIB", "BIB", " P ", Character.valueOf('B'), Blocks.obsidian, Character.valueOf('I'), Items.iron_ingot, Character.valueOf('P'), new ItemStack(SwordHandle) });
+		GameRegistry.addRecipe(new ItemStack(earthSword, 1),
+				new Object[] { "BIB", "BIB", " P ", Character.valueOf('B'), Blocks.dirt, Character.valueOf('I'), Items.iron_ingot, Character.valueOf('P'), new ItemStack(SwordHandle) });
+		GameRegistry.addRecipe(new ItemStack(enderSword, 1),
+				new Object[] { "BIB", "BIB", " P ", Character.valueOf('B'), Items.ender_pearl, Character.valueOf('I'), Items.iron_ingot, Character.valueOf('P'), new ItemStack(SwordHandle) });
+		GameRegistry.addRecipe(new ItemStack(lightSword, 1),
+				new Object[] { "BIB", "BIB", " P ", Character.valueOf('B'), Items.glowstone_dust, Character.valueOf('I'), Items.iron_ingot, Character.valueOf('P'), new ItemStack(SwordHandle) });
+		GameRegistry.addRecipe(new ItemStack(meteorSword, 1),
+				new Object[] { " C ", "BPB", "BFB", Character.valueOf('B'), Items.blaze_powder, Character.valueOf('P'), Items.blaze_rod, Character.valueOf('F'), new ItemStack(fireSword), Character.valueOf('C'), Items.fire_charge });
+		GameRegistry.addRecipe(new ItemStack(peacefulNatureSword, 1),
+				new Object[] { " S ", " C ", "SAS", Character.valueOf('S'), Blocks.sapling, Character.valueOf('C'), Items.reeds, Character.valueOf('A'), new ItemStack(earthSword) });
+		GameRegistry.addRecipe(new ItemStack(thunderSword, 1),
+				new Object[] { "BIB", "BIB", " P ", Character.valueOf('B'), Items.redstone, Character.valueOf('I'), Items.iron_ingot, Character.valueOf('P'), new ItemStack(SwordHandle) });
+		GameRegistry.addRecipe(new ItemStack(waterSword, 1),
+				new Object[] { "GBG", "GBG", " P ", Character.valueOf('B'), Items.water_bucket, Character.valueOf('P'), Items.stick, Character.valueOf('G'), Blocks.glass });
+		GameRegistry.addRecipe(new ItemStack(wildNatureSword, 1),
+				new Object[] { " S ", " C ", "SAS", Character.valueOf('S'), Blocks.cactus, Character.valueOf('C'), Items.reeds, Character.valueOf('A'), new ItemStack(peacefulNatureSword) });
+		GameRegistry.addRecipe(new ItemStack(windSword, 1),
+				new Object[] { "BIB", "BIB", " P ", Character.valueOf('B'), Items.feather, Character.valueOf('I'), Items.iron_ingot, Character.valueOf('P'), new ItemStack(SwordHandle) });
+		GameRegistry.addRecipe(new ItemStack(thunderstormSword, 1),
+				new Object[] { " I ", "TIW", " S ", Character.valueOf('W'), new ItemStack(windSword), Character.valueOf('T'), new ItemStack(thunderSword), Character.valueOf('I'), Items.iron_ingot, Character.valueOf('S'), Items.stick });
+		GameRegistry.addRecipe(new ItemStack(meteoricthunderstormSword, 1),
+				new Object[] { " I ", "TIW", " S ", Character.valueOf('W'), new ItemStack(thunderstormSword), Character.valueOf('T'), new ItemStack(meteorSword), Character.valueOf('I'), Items.iron_ingot, Character.valueOf('S'), Items.stick });
+		GameRegistry.addRecipe(new ItemStack(enderFireSword, 1),
+				new Object[] { " I ", "AIB", " S ", Character.valueOf('A'), new ItemStack(enderSword), Character.valueOf('B'), new ItemStack(fireSword), Character.valueOf('I'), Items.iron_ingot, Character.valueOf('S'), Items.stick });
+		GameRegistry.addRecipe(new ItemStack(iceSword, 1),
+				new Object[] { " B ", "B B", "BFB", Character.valueOf('B'), Items.snowball, Character.valueOf('F'), new ItemStack(waterSword) });
+		GameRegistry.addRecipe(new ItemStack(enderWindSword, 1),
+				new Object[] { " I ", "AIB", " S ", Character.valueOf('A'), new ItemStack(enderSword), Character.valueOf('B'), new ItemStack(windSword), Character.valueOf('I'), Items.iron_ingot, Character.valueOf('S'), Items.stick });
+		GameRegistry.addRecipe(new ItemStack(enderThunderSword, 1),
+				new Object[] { " I ", "AIB", " S ", Character.valueOf('A'), new ItemStack(enderSword), Character.valueOf('B'), new ItemStack(thunderSword), Character.valueOf('I'), Items.iron_ingot, Character.valueOf('S'), Items.stick });
+		GameRegistry.addRecipe(new ItemStack(thunderShockSword, 1),
+				new Object[] { "BBB", "BAB", "BBB", Character.valueOf('A'), new ItemStack(thunderSword), Character.valueOf('B'), Items.redstone });
+		GameRegistry.addRecipe(new ItemStack(timeSword, 1),
+				new Object[] { " I ", "AIB", " S ", Character.valueOf('A'), new ItemStack(darkSword), Character.valueOf('B'), new ItemStack(lightSword), Character.valueOf('I'), Items.iron_ingot, Character.valueOf('S'), Items.stick });
+		GameRegistry.addRecipe(new ItemStack(beastSword, 1),
+				new Object[] { "BIB", "BIB", " P ", Character.valueOf('B'), Items.bone, Character.valueOf('I'), Items.iron_ingot, Character.valueOf('P'), new ItemStack(SwordHandle) });
+		GameRegistry.addRecipe(new ItemStack(windBlastSword, 1),
+				new Object[] { "PBF", "PEF", "PBF", Character.valueOf('E'), new ItemStack(windSword), Character.valueOf('P'), Items.gunpowder, Character.valueOf('F'), Items.feather, Character.valueOf('B'), Items.blaze_rod });
+		GameRegistry.addRecipe(new ItemStack(darkNetherSword, 1),
+				new Object[] { " B ", "OSO", " O ", Character.valueOf('S'), new ItemStack(darkSword), Character.valueOf('O'), Blocks.obsidian, Character.valueOf('B'), new ItemStack(Items.skull, 1, 1) });
+		GameRegistry.addRecipe(new ItemStack(lightNetherSword, 1),
+				new Object[] { " B ", "OSO", " O ", Character.valueOf('S'), new ItemStack(lightSword), Character.valueOf('O'), Blocks.glowstone, Character.valueOf('B'), Items.golden_apple });
+		GameRegistry.addRecipe(new ItemStack(enderPortalSword, 1),
+				new Object[] { "EBE", "BSB", "EBE", Character.valueOf('S'), new ItemStack(enderSword), Character.valueOf('E'), Items.ender_eye, Character.valueOf('B'), Items.blaze_rod });
+		GameRegistry.addRecipe(new ItemStack(blizzardSword, 1),
+				new Object[] { "IBI", "BFB", "IBI", Character.valueOf('F'), new ItemStack(iceSword), Character.valueOf('I'), Blocks.ice, Character.valueOf('B'), Items.ghast_tear });
+		GameRegistry.addRecipe(new ItemStack(windWhirlSword, 1),
+				new Object[] { "IBI", "BFB", "IBI", Character.valueOf('F'), new ItemStack(windBlastSword), Character.valueOf('I'), Items.feather, Character.valueOf('B'), Items.ghast_tear });   
+		GameRegistry.addRecipe(new ItemStack(steamSword, 1),
+				new Object[] { " I ", "AIB", " S ", Character.valueOf('A'), new ItemStack(fireSword), Character.valueOf('B'), new ItemStack(waterSword), Character.valueOf('I'), Items.iron_ingot, Character.valueOf('S'), Items.stick }); 
+		GameRegistry.addRecipe(new ItemStack(wolfSword, 1),
+				new Object[] { "IBI", "BFB", "IBI", Character.valueOf('F'), new ItemStack(beastSword), Character.valueOf('I'), Items.bone, Character.valueOf('B'), Items.blaze_powder });
 		
 		/* Essence Recipes */
 		
 		/* Smeltings */
-		GameRegistry.addSmelting(fireSword, new ItemStack(Items.blaze_powder, 2), 1F);
-		GameRegistry.addSmelting(meteorSword, new ItemStack(EssenceFire, 1), 10F);
-		GameRegistry.addSmelting(beastSword, new ItemStack(Items.bone, 4), 1F);
-		GameRegistry.addSmelting(darkSword, new ItemStack(Blocks.obsidian, 1), 1F);
-		GameRegistry.addSmelting(darkNetherSword, new ItemStack(EssenceDark, 3), 10F);
-		GameRegistry.addSmelting(earthSword, new ItemStack(Blocks.dirt, 2), 1F);
-		GameRegistry.addSmelting(peacefulNatureSword, new ItemStack(EssenceEarth, 1), 10F);
-		GameRegistry.addSmelting(wildNatureSword, new ItemStack(EssenceEarth, 2), 15F);
-		GameRegistry.addSmelting(enderSword, new ItemStack(Items.ender_pearl, 1), 1F);
-		GameRegistry.addSmelting(enderPortalSword, new ItemStack(EssenceEnder, 1), 10F);
-		GameRegistry.addSmelting(lightSword, new ItemStack(Items.ghast_tear, 1), 1F);
-		GameRegistry.addSmelting(lightNetherSword, new ItemStack(EssenceLight, 1), 10F);
-		GameRegistry.addSmelting(thunderSword, new ItemStack(Blocks.redstone_block, 2), 1F);
-		GameRegistry.addSmelting(thunderShockSword, new ItemStack(EssenceThunder, 1), 10F);
-		GameRegistry.addSmelting(waterSword, new ItemStack(Items.water_bucket, 2), 1F);
-		GameRegistry.addSmelting(iceSword, new ItemStack(EssenceWater, 1), 10F);
-		GameRegistry.addSmelting(blizzardSword, new ItemStack(EssenceWater, 2), 15F);
-		GameRegistry.addSmelting(windSword, new ItemStack(Items.feather, 4), 1F);
-		GameRegistry.addSmelting(windBlastSword, new ItemStack(EssenceWind, 1), 10F);
-		GameRegistry.addSmelting(windWhirlSword, new ItemStack(EssenceWind, 2), 15F);
+		GameRegistry.addSmelting(fireSword, new ItemStack(EssenceFire, 1), 10F);
+		GameRegistry.addSmelting(meteorSword, new ItemStack(EssenceFire, 2), 15F);
+		GameRegistry.addSmelting(beastSword, new ItemStack(EssenceBeast, 1), 10F);
+		GameRegistry.addSmelting(wolfSword, new ItemStack(EssenceBeast, 2), 15F);
+		GameRegistry.addSmelting(darkSword, new ItemStack(EssenceDark, 1), 10F);
+		GameRegistry.addSmelting(darkNetherSword, new ItemStack(EssenceDark, 2), 15F);
+		GameRegistry.addSmelting(earthSword, new ItemStack(EssenceEarth, 1), 10F);
+		GameRegistry.addSmelting(peacefulNatureSword, new ItemStack(EssenceEarth, 2), 15F);
+		GameRegistry.addSmelting(wildNatureSword, new ItemStack(EssenceEarth, 3), 20F);
+		GameRegistry.addSmelting(enderSword, new ItemStack(EssenceEnder, 1), 10F);
+		GameRegistry.addSmelting(enderPortalSword, new ItemStack(EssenceEnder, 2), 15F);
+		GameRegistry.addSmelting(lightSword, new ItemStack(EssenceLight, 1), 10F);
+		GameRegistry.addSmelting(lightNetherSword, new ItemStack(EssenceLight, 2), 15F);
+		GameRegistry.addSmelting(thunderSword, new ItemStack(EssenceThunder, 1), 10F);
+		GameRegistry.addSmelting(thunderShockSword, new ItemStack(EssenceThunder, 2), 15F);
+		GameRegistry.addSmelting(waterSword, new ItemStack(EssenceWater, 1), 10F);
+		GameRegistry.addSmelting(iceSword, new ItemStack(EssenceWater, 2), 15F);
+		GameRegistry.addSmelting(blizzardSword, new ItemStack(EssenceWater, 3), 20F);
+		GameRegistry.addSmelting(windSword, new ItemStack(EssenceWind, 1), 10F);
+		GameRegistry.addSmelting(windBlastSword, new ItemStack(EssenceWind, 2), 15F);
+		GameRegistry.addSmelting(windWhirlSword, new ItemStack(EssenceWind, 3), 20F);
 		
 		/* Upgrading Recipes Lvl 0-1 */
 		
