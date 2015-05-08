@@ -1,0 +1,49 @@
+# Cyan Warrior Swords Mod Language File = GERMANY GERMAN
+# Thanks to m3Zz!
+
+# SWORDS
+item.fireSword.name=Feuerschwert
+item.darkSword.name=Dunkelschwert
+item.earthSword.name=Erdschwert
+item.enderSword.name=Enderschwert
+item.lightSword.name=Lichtschwert
+item.meteorSword.name=Meteorschwert
+item.peacefulNatureSword.name=Friedvolles Naturschwert
+item.thunderSword.name=Donnerschwert
+item.waterSword.name=Wasserschwert
+item.wildNatureSword.name=Wildes Naturschwert
+item.windSword.name=Windschwert
+item.thunderstormSword.name=Gewitterschwert
+item.iceSword.name=Eisschwert
+item.meteoricthunderstormSword.name=Meteorisches Gewitterschwert
+item.enderFireSword.name=Ender-Feuerschwert
+item.enderThunderSword.name=Ender-Donnerschwert
+item.enderWindSword.name=Ender-Windschwert
+item.thunderShockSword.name=Donnerschockschwert
+item.timeSword.name=Zeitschwert
+item.beastSword.name=Bestienschwert
+item.windBlastSword.name=Windstoßschwert
+item.darkNetherSword.name=Dunkel-Netherschwert
+item.lightNetherSword.name=Licht-Netherschwert
+item.enderPortalSword.name=Ender-Portalschwert
+item.trienderSword.name=Tri-Enderschwert
+item.SteamSword.name=Dampfschwert
+item.BlizzardSword.name=Blizzardschwert
+item.WindWhirlSword.name=Wirbelsturmschwert
+item.CyanSword.name=Cyan Schwert
+
+# Essences
+
+item.EssenceFire.name=Feueressenz 
+item.EssenceBeast.name=Bestienessenz 
+item.EssenceDark.name=Dunkelessenz 
+item.EssenceEarth.name=Erdessenz 
+item.EssenceEnder.name=Enderessenz
+item.EssenceLight.name=Lichtessenz
+item.EssenceThunder.name=Donneressenz 
+item.EssenceWater.name=Wasseressenz 
+item.EssenceWind.name=Windessenz
+item.EssenceMixed.name=Gemixte Essenz
+item.SwordHandle.name=Elementarer Schwertgriff
+
+# </file>
