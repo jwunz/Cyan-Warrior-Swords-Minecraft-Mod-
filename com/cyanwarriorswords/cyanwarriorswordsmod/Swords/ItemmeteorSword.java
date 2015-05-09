@@ -68,7 +68,7 @@ int k = (int)(entity.prevPosZ + (entity.posZ - entity.prevPosZ) * (double)var4);
 if (!world.isRemote)
 {
 Vec3 look = entity.getLookVec();
-EntityLargeFireball fireball2 = new EntityLargeFireball(world, entity, 1, 1, 1);
+EntityLargeFireball fireball2 = new EntityLargeFireball(world, entity, 0, 0, 0);
 fireball2.setPosition(entity.posX + look.xCoord * 5, entity.posY + look.yCoord * 5, entity.posZ + look.zCoord * 5);
 fireball2.accelerationX = look.xCoord * 0.5;
 fireball2.accelerationY = look.yCoord * 0.5;
