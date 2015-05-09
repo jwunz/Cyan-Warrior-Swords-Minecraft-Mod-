@@ -10,6 +10,7 @@ import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityLiving;
 import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.entity.player.EntityPlayer;
+import net.minecraft.entity.projectile.EntityLargeFireball;
 import net.minecraft.entity.projectile.EntityWitherSkull;
 import net.minecraft.item.EnumAction;
 import net.minecraft.item.Item;
@@ -67,11 +68,11 @@ itemstack.damageItem(1, entity);
 if (!world.isRemote)
 {
 Vec3 look = entity.getLookVec();
-EntityWitherSkull fireball2 = new EntityWitherSkull(world, entity, 0, 3, 0);
-fireball2.setPosition(entity.posX + look.xCoord, entity.posY + look.yCoord, entity.posZ + look.zCoord);
-fireball2.accelerationX = look.xCoord;
-fireball2.accelerationY = look.yCoord;
-fireball2.accelerationZ = look.zCoord;
+EntityWitherSkull fireball2 = new EntityWitherSkull(world, entity, 0, 0, 0);
+fireball2.setPosition(entity.posX + look.xCoord * 5, entity.posY + look.yCoord * 5, entity.posZ + look.zCoord * 5);
+fireball2.accelerationX = look.xCoord * 0.5;
+fireball2.accelerationY = look.yCoord * 0.5;
+fireball2.accelerationZ = look.zCoord * 0.5;
 world.playSoundEffect((double)i + 0.5D, (double)j + 0.5D, (double)k + 0.5D, "mob.wither.idle", 1.0F, 1.0F);
 world.spawnEntityInWorld(fireball2);
 }
