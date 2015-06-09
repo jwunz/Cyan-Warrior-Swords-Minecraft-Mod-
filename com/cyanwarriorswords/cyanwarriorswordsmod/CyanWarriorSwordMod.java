@@ -47,6 +47,7 @@ import com.cyanwarriorswords.cyanwarriorswordsmod.Swords.Mixing.ItemtimeSword;
 import com.cyanwarriorswords.cyanwarriorswordsmod.Swords.Mixing.ItemtrienderSword;
 import com.cyanwarriorswords.cyanwarriorswordsmod.Swords.ThunderType.ItemthunderShockSword;
 import com.cyanwarriorswords.cyanwarriorswordsmod.Swords.ThunderType.ItemthunderSword;
+import com.cyanwarriorswords.cyanwarriorswordsmod.Swords.ThunderType.ItemthunderZeusSword;
 import com.cyanwarriorswords.cyanwarriorswordsmod.Swords.WaterType.ItemblizzardSword;
 import com.cyanwarriorswords.cyanwarriorswordsmod.Swords.WaterType.ItemiceSword;
 import com.cyanwarriorswords.cyanwarriorswordsmod.Swords.WaterType.ItemwaterSword;
@@ -109,10 +110,12 @@ public class CyanWarriorSwordMod
     public int thunderShockSwordID = 5257;
     public static Item timeSword;
     public int timeSwordID = 5258;
-    public static Item beastSword;
-    public int beastSwordID = 5261;
     public static Item windBlastSword;
     public int windBlastSwordID = 5259;
+    public static Item windWhirlSword;
+    public int windWhirlSwordID = 5260;
+    public static Item beastSword;
+    public int beastSwordID = 5261;
     public static Item darkNetherSword;
     public int darkNetherSwordID = 5262;
     public static Item lightNetherSword;
@@ -125,8 +128,6 @@ public class CyanWarriorSwordMod
     public int steamSwordID = 5266;
     public static Item blizzardSword;
     public int blizzardSwordID = 5267;
-    public static Item windWhirlSword;
-    public int windWhirlSwordID = 5260;
     public static Item wolfSword;
     public int wolfSwordID = 5268;
     public static Item cyanSword;
@@ -153,6 +154,8 @@ public class CyanWarriorSwordMod
     public int EssenceMixedID = 5279;
     public static Item SwordHandle;
     public int SwordHandleID = 5280;
+    public static Item thunderZeusSword;
+    public int thunderZeusSwordID = 5281;
     
     public static CreativeTabs CyanSwordTab = new CreativeTabs("Cyan_Warrior_Swords")
     {
@@ -209,6 +212,7 @@ public class CyanWarriorSwordMod
 		windWhirlSword = new ItemwindWhirlSword(windWhirlSwordID, CyanWarriorSwordMod.Dam9).setUnlocalizedName("WindWhirlSword").setCreativeTab(CyanSwordTab);
 		wolfSword = new ItemwolfSword(wolfSwordID, CyanWarriorSwordMod.Dam10).setUnlocalizedName("WolfSword").setCreativeTab(CyanSwordTab);
 		cyanSword = new ItemcyanSword(cyanSwordID, Dam23).setUnlocalizedName("CyanSword").setCreativeTab(CyanSwordTab);
+		thunderZeusSword = new ItemthunderZeusSword(thunderZeusSwordID, CyanWarriorSwordMod.Dam11).setUnlocalizedName("ThunderZeusSword").setCreativeTab(CyanSwordTab);
 		
 		EssenceFire = new ItemEssenceFire(EssenceFireID, CyanWarriorSwordMod.Bow).setUnlocalizedName("EssenceFire").setCreativeTab(CyanSwordTab);
 		EssenceBeast = new ItemEssenceBeast(EssenceBeastID, CyanWarriorSwordMod.Bow).setUnlocalizedName("EssenceBeast").setCreativeTab(CyanSwordTab);
@@ -280,6 +284,8 @@ public class CyanWarriorSwordMod
 		GameRegistry.registerItem(windWhirlSword, "WindWhirlSword");
 		GameRegistry.registerItem(wolfSword, "WolfSword");
 		GameRegistry.registerItem(cyanSword, "CyanSword");
+		GameRegistry.registerItem(thunderZeusSword, "ThunderZeusSword");
+		
 		GameRegistry.registerItem(EssenceFire, "EssenceFire");
 		GameRegistry.registerItem(EssenceBeast, "EssenceBeast");
 		GameRegistry.registerItem(EssenceDark, "EssenceDark");
@@ -350,6 +356,8 @@ public class CyanWarriorSwordMod
 				new Object[] { " I ", "AIB", " S ", Character.valueOf('A'), new ItemStack(fireSword), Character.valueOf('B'), new ItemStack(waterSword), Character.valueOf('I'), Items.iron_ingot, Character.valueOf('S'), Items.stick }); 
 		GameRegistry.addRecipe(new ItemStack(wolfSword, 1),
 				new Object[] { "IBI", "BFB", "IBI", Character.valueOf('F'), new ItemStack(beastSword), Character.valueOf('I'), Items.bone, Character.valueOf('B'), Items.blaze_powder });
+		GameRegistry.addRecipe(new ItemStack(thunderZeusSword, 1),
+				new Object[] { "IBI", "BAB", "IBI", Character.valueOf('A'), new ItemStack(thunderShockSword), Character.valueOf('B'), Blocks.redstone_block, Character.valueOf('I'), Items.diamond});
 		
 		/* Essence Recipes */
 		
@@ -369,6 +377,7 @@ public class CyanWarriorSwordMod
 		GameRegistry.addSmelting(lightNetherSword, new ItemStack(EssenceLight, 2), 15F);
 		GameRegistry.addSmelting(thunderSword, new ItemStack(EssenceThunder, 1), 10F);
 		GameRegistry.addSmelting(thunderShockSword, new ItemStack(EssenceThunder, 2), 15F);
+		GameRegistry.addSmelting(thunderZeusSword, new ItemStack(EssenceThunder, 3), 20F);
 		GameRegistry.addSmelting(waterSword, new ItemStack(EssenceWater, 1), 10F);
 		GameRegistry.addSmelting(iceSword, new ItemStack(EssenceWater, 2), 15F);
 		GameRegistry.addSmelting(blizzardSword, new ItemStack(EssenceWater, 3), 20F);
@@ -425,6 +434,8 @@ public class CyanWarriorSwordMod
 				new Object[]{ new ItemStack(EssenceWater), new ItemStack(EssenceWater), new ItemStack(EssenceWater), Items.iron_sword});
 		GameRegistry.addShapelessRecipe(new ItemStack(windWhirlSword, 1), 
 				new Object[]{ new ItemStack(EssenceWind), new ItemStack(EssenceWind), new ItemStack(EssenceWind), Items.iron_sword});
+		GameRegistry.addShapelessRecipe(new ItemStack(thunderZeusSword, 1), 
+				new Object[]{ new ItemStack(EssenceThunder), new ItemStack(EssenceThunder), new ItemStack(EssenceThunder), Items.iron_sword});
 		
 /* Upgrading Recipes Lvl 1-2 */
 		
@@ -453,6 +464,8 @@ public class CyanWarriorSwordMod
 				new Object[]{ new ItemStack(EssenceWater), new ItemStack(iceSword)});
 		GameRegistry.addShapelessRecipe(new ItemStack(windWhirlSword, 1), 
 				new Object[]{ new ItemStack(EssenceWind), new ItemStack(windBlastSword)});
+		GameRegistry.addShapelessRecipe(new ItemStack(thunderZeusSword, 1), 
+				new Object[]{ new ItemStack(EssenceThunder), new ItemStack(thunderShockSword)});
 		
 		/* Mixing Recipes*/
 		
@@ -516,6 +529,7 @@ public class CyanWarriorSwordMod
 		LanguageRegistry.addName(windWhirlSword, "WindWhirl Sword");
 		LanguageRegistry.addName(blizzardSword, "Blizzard Sword");
 		LanguageRegistry.addName(wolfSword, "Wolf Sword");
+		LanguageRegistry.addName(thunderZeusSword, "Thunder Zeus Sword");
 		/* Essences */
 		LanguageRegistry.addName(EssenceFire, "Fire Essence");
 		LanguageRegistry.addName(EssenceBeast, "Beast Essence");
