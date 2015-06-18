@@ -67,7 +67,7 @@ import cpw.mods.fml.common.registry.LanguageRegistry;
 public class CyanWarriorSwordMod
 {
     public static final String MODID = "Cyan Warrior Swords Mod";
-    public static final String VERSION = "2.0.3";
+    public static final String VERSION = "2.1";
     
     @Metadata
     public static ModMetadata meta;
