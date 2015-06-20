@@ -281,6 +281,7 @@ public class CyanWarriorSwordMod
 		GameRegistry.registerItem(enderPortalSword, "EnderPortalSword");
 		GameRegistry.registerItem(trienderSword, "TriEnderSword");
 		GameRegistry.registerItem(steamSword, "SteamSword");
+		GameRegistry.registerItem(blizzardSword, "BlizzardSword");
 		GameRegistry.registerItem(windWhirlSword, "WindWhirlSword");
 		GameRegistry.registerItem(wolfSword, "WolfSword");
 		GameRegistry.registerItem(cyanSword, "CyanSword");
