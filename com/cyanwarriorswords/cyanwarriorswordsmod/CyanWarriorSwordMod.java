@@ -1,6 +1,9 @@
 package com.cyanwarriorswords.cyanwarriorswordsmod;
 
+import org.lwjgl.input.Keyboard;
+
 import net.minecraft.block.Block;
+import net.minecraft.client.settings.KeyBinding;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.init.Blocks;
 import net.minecraft.init.Items;
@@ -55,6 +58,7 @@ import com.cyanwarriorswords.cyanwarriorswordsmod.Swords.WindType.ItemwindBlastS
 import com.cyanwarriorswords.cyanwarriorswordsmod.Swords.WindType.ItemwindSword;
 import com.cyanwarriorswords.cyanwarriorswordsmod.Swords.WindType.ItemwindWhirlSword;
 
+import cpw.mods.fml.client.registry.ClientRegistry;
 import cpw.mods.fml.common.Mod;
 import cpw.mods.fml.common.Mod.EventHandler;
 import cpw.mods.fml.common.Mod.Metadata;
@@ -67,7 +71,7 @@ import cpw.mods.fml.common.registry.LanguageRegistry;
 public class CyanWarriorSwordMod
 {
     public static final String MODID = "Cyan Warrior Swords Mod";
-    public static final String VERSION = "2.1.1";
+    public static final String VERSION = "2.1.2";
     
     @Metadata
     public static ModMetadata meta;
@@ -547,6 +551,7 @@ public class CyanWarriorSwordMod
 		LanguageRegistry.instance().addStringLocalization("itemGroup.Cyan_Warrior_Swords", "Cyan Warrior Swords");
 		
 	}
+	
     
 }
     
