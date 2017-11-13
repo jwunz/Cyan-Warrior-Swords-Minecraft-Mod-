@@ -1,4 +1,4 @@
-package com.cyanwarriorswords.cyanwarriorswordmod.Swords.TNTType;
+package com.cyanwarriorswords.cyanwarriorswordsmod.Swords.TNTType;
 
 import net.minecraft.item.ItemSword;
 
