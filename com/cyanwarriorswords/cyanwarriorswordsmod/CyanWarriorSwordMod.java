@@ -48,6 +48,8 @@ import com.cyanwarriorswords.cyanwarriorswordsmod.Swords.Mixing.ItemsteamSword;
 import com.cyanwarriorswords.cyanwarriorswordsmod.Swords.Mixing.ItemthunderstormSword;
 import com.cyanwarriorswords.cyanwarriorswordsmod.Swords.Mixing.ItemtimeSword;
 import com.cyanwarriorswords.cyanwarriorswordsmod.Swords.Mixing.ItemtrienderSword;
+import com.cyanwarriorswords.cyanwarriorswordsmod.Swords.TNTType.ItemCannonSword;
+import com.cyanwarriorswords.cyanwarriorswordsmod.Swords.TNTType.ItemTNTSword;
 import com.cyanwarriorswords.cyanwarriorswordsmod.Swords.ThunderType.ItemthunderShockSword;
 import com.cyanwarriorswords.cyanwarriorswordsmod.Swords.ThunderType.ItemthunderSword;
 import com.cyanwarriorswords.cyanwarriorswordsmod.Swords.ThunderType.ItemthunderZeusSword;
@@ -160,6 +162,10 @@ public class CyanWarriorSwordMod
     public int SwordHandleID = 5280;
     public static Item thunderZeusSword;
     public int thunderZeusSwordID = 5281;
+    public static Item TNTSword;
+    public int TNTSwordID = 5282;
+    public static Item CannonSword;
+    public int CannonSwordID = 5283;
     
     public static CreativeTabs CyanSwordTab = new CreativeTabs("Cyan_Warrior_Swords")
     {
@@ -217,6 +223,8 @@ public class CyanWarriorSwordMod
 		wolfSword = new ItemwolfSword(wolfSwordID, CyanWarriorSwordMod.Dam10).setUnlocalizedName("WolfSword").setCreativeTab(CyanSwordTab);
 		cyanSword = new ItemcyanSword(cyanSwordID, Dam23).setUnlocalizedName("CyanSword").setCreativeTab(CyanSwordTab);
 		thunderZeusSword = new ItemthunderZeusSword(thunderZeusSwordID, CyanWarriorSwordMod.Dam11).setUnlocalizedName("ThunderZeusSword").setCreativeTab(CyanSwordTab);
+		TNTSword = new ItemTNTSword(TNTSwordID,Dam8).setUnlocalizedName("TNTSword").setCreativeTab(CyanSwordTab);
+		CannonSword = new ItemCannonSword(CannonSwordID, Dam8).setUnlocalizedName("CannonSword").setCreativeTab(CyanSwordTab);
 		
 		EssenceFire = new ItemEssenceFire(EssenceFireID, CyanWarriorSwordMod.Bow).setUnlocalizedName("EssenceFire").setCreativeTab(CyanSwordTab);
 		EssenceBeast = new ItemEssenceBeast(EssenceBeastID, CyanWarriorSwordMod.Bow).setUnlocalizedName("EssenceBeast").setCreativeTab(CyanSwordTab);
@@ -290,6 +298,8 @@ public class CyanWarriorSwordMod
 		GameRegistry.registerItem(wolfSword, "WolfSword");
 		GameRegistry.registerItem(cyanSword, "CyanSword");
 		GameRegistry.registerItem(thunderZeusSword, "ThunderZeusSword");
+		GameRegistry.registerItem(TNTSword, "TNTSword");
+		GameRegistry.registerItem(CannonSword, "CannonSword");
 		
 		GameRegistry.registerItem(EssenceFire, "EssenceFire");
 		GameRegistry.registerItem(EssenceBeast, "EssenceBeast");
@@ -535,6 +545,8 @@ public class CyanWarriorSwordMod
 		LanguageRegistry.addName(blizzardSword, "Blizzard Sword");
 		LanguageRegistry.addName(wolfSword, "Wolf Sword");
 		LanguageRegistry.addName(thunderZeusSword, "Thunder Zeus Sword");
+		LanguageRegistry.addName(TNTSword, "TNT Sword");
+		LanguageRegistry.addName(CannonSword, "Cannon Sword");
 		/* Essences */
 		LanguageRegistry.addName(EssenceFire, "Fire Essence");
 		LanguageRegistry.addName(EssenceBeast, "Beast Essence");
