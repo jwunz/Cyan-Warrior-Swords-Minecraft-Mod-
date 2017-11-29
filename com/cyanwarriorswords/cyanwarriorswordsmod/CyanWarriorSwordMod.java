@@ -373,6 +373,10 @@ public class CyanWarriorSwordMod
 				new Object[] { "IBI", "BFB", "IBI", Character.valueOf('F'), new ItemStack(beastSword), Character.valueOf('I'), Items.bone, Character.valueOf('B'), Items.blaze_powder });
 		GameRegistry.addRecipe(new ItemStack(thunderZeusSword, 1),
 				new Object[] { "IBI", "BAB", "IBI", Character.valueOf('A'), new ItemStack(thunderShockSword), Character.valueOf('B'), Blocks.redstone_block, Character.valueOf('I'), Items.diamond});
+		GameRegistry.addRecipe(new ItemStack(TNTSword,1),
+				new Object[] { " T ", " T ", " H ", Character.valueOf('T'), Blocks.tnt, Character.valueOf('H'), new ItemStack(SwordHandle)});
+		GameRegistry.addRecipe(new ItemStack(CannonSword,1), 
+				new Object[] { "TTT", "TST", "THT", Character.valueOf('T'), Blocks.tnt, Character.valueOf('H'), new ItemStack(SwordHandle), Character.valueOf('S'), new ItemStack(TNTSword)});
 		
 		/* Essence Recipes */
 		
